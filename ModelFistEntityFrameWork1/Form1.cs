@@ -37,8 +37,26 @@ namespace ModelFistEntityFrameWork1
             Tablo.PerMaas = Convert.ToInt16(TeMaas.Text);
             ent.TblPersonel.Add(Tablo);
             ent.SaveChanges();
-            XtraMessageBox.Show("Personel Başarılı","Personel",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            XtraMessageBox.Show("Personel Ekleme Başarılı","Personel",MessageBoxButtons.OK,MessageBoxIcon.Information);
             gridControl1.DataSource = ent.TblPersonel.ToList();
+        }
+
+        private void SBtnSil_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt16(TeID.Text);
+            TblPersonel tablo = ent.TblPersonel.First(x => x.Perid==id);
+            ent.TblPersonel.Remove(tablo);
+            ent.SaveChanges();
+
+            XtraMessageBox.Show("Personel Silme Başarılı", "Personel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            gridControl1.DataSource = ent.TblPersonel.ToList();
+
+        }
+
+        private void SBtnGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt16(TeID.Text);
+
         }
     }
 }

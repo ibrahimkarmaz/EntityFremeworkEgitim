@@ -209,6 +209,7 @@ namespace ModelFistEntityFrameWork1
             this.SBtnSil.Size = new System.Drawing.Size(261, 37);
             this.SBtnSil.TabIndex = 14;
             this.SBtnSil.Text = "Sil";
+            this.SBtnSil.Click += new System.EventHandler(this.SBtnSil_Click);
             // 
             // SBtnGuncelle
             // 
@@ -220,6 +221,7 @@ namespace ModelFistEntityFrameWork1
             this.SBtnGuncelle.Size = new System.Drawing.Size(261, 37);
             this.SBtnGuncelle.TabIndex = 15;
             this.SBtnGuncelle.Text = "Güncelle";
+            this.SBtnGuncelle.Click += new System.EventHandler(this.SBtnGuncelle_Click);
             // 
             // gridControl1
             // 
