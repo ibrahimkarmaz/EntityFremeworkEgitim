@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SinemaTakipOtomasyoSistemiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblFilmler">
+    <Key>
+      <PropertyRef Name="FilmID" />
+    </Key>
+    <Property Name="FilmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmAd" Type="varchar" MaxLength="50" />
+    <Property Name="FilmYonetmen" Type="varchar" MaxLength="50" />
+    <Property Name="TurID" Type="smallint" />
+    <Property Name="FilmSure" Type="varchar" MaxLength="10" />
+    <Property Name="FilmYerli" Type="bit" />
+    <Property Name="FilmKonu" Type="varchar" MaxLength="200" />
+    <Property Name="FilmYil" Type="varchar" MaxLength="4" />
+    <Property Name="Film3D" Type="bit" />
+    <Property Name="FilmAfisResim" Type="varchar" MaxLength="250" />
+    <Property Name="FilmArsiv" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SinemaTakipOtomasyoSistemi.dbo.TblTur' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblTur">
+    <Key>
+      <PropertyRef Name="TurID" />
+    </Key>
+    <Property Name="TurID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TurAd" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="SinemaTakipOtomasyoSistemiModelStoreContainer">
+    <EntitySet Name="TblFilmler" EntityType="Self.TblFilmler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblTur" EntityType="Self.TblTur" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TblTur].[TurID] AS [TurID], 
+    [TblTur].[TurAd] AS [TurAd]
+    FROM [dbo].[TblTur] AS [TblTur]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

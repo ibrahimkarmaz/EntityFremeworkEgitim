@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SinemaTakipOtomasyoSistemiModelStoreContainer" CdmEntityContainer="SinemaTakipOtomasyoSistemiEntities">
+    <EntitySetMapping Name="TblFilmlers">
+      <EntityTypeMapping TypeName="SinemaTakipOtomasyoSistemiModel.TblFilmler">
+        <MappingFragment StoreEntitySet="TblFilmler">
+          <ScalarProperty Name="FilmID" ColumnName="FilmID" />
+          <ScalarProperty Name="FilmAd" ColumnName="FilmAd" />
+          <ScalarProperty Name="FilmYonetmen" ColumnName="FilmYonetmen" />
+          <ScalarProperty Name="TurID" ColumnName="TurID" />
+          <ScalarProperty Name="FilmSure" ColumnName="FilmSure" />
+          <ScalarProperty Name="FilmYerli" ColumnName="FilmYerli" />
+          <ScalarProperty Name="FilmKonu" ColumnName="FilmKonu" />
+          <ScalarProperty Name="FilmYil" ColumnName="FilmYil" />
+          <ScalarProperty Name="Film3D" ColumnName="Film3D" />
+          <ScalarProperty Name="FilmAfisResim" ColumnName="FilmAfisResim" />
+          <ScalarProperty Name="FilmArsiv" ColumnName="FilmArsiv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTurs">
+      <EntityTypeMapping TypeName="SinemaTakipOtomasyoSistemiModel.TblTur">
+        <MappingFragment StoreEntitySet="TblTur">
+          <ScalarProperty Name="TurID" ColumnName="TurID" />
+          <ScalarProperty Name="TurAd" ColumnName="TurAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
