@@ -198,6 +198,7 @@ namespace ModelFistEntityFrameWork1
             this.SBtnListele.Size = new System.Drawing.Size(261, 37);
             this.SBtnListele.TabIndex = 13;
             this.SBtnListele.Text = "Listele";
+            this.SBtnListele.Click += new System.EventHandler(this.SBtnListele_Click);
             // 
             // SBtnSil
             // 

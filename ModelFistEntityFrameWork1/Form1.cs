@@ -56,7 +56,21 @@ namespace ModelFistEntityFrameWork1
         private void SBtnGuncelle_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt16(TeID.Text);
+            TblPersonel Tablo = ent.TblPersonel.First(x => x.Perid == id);
+            Tablo.PerAd = TeAd.Text;
+            Tablo.PerSoyad = TeSoyad.Text;
+            Tablo.PerSehir = TeSehir.Text;
+            Tablo.PerMaas = Convert.ToInt16(TeMaas.Text);
+            ent.SaveChanges();
 
+            XtraMessageBox.Show("Personel Güncelleme Başarılı", "Personel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            gridControl1.DataSource = ent.TblPersonel.ToList();
+
+        }
+
+        private void SBtnListele_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = ent.TblPersonel.ToList();
         }
     }
 }
