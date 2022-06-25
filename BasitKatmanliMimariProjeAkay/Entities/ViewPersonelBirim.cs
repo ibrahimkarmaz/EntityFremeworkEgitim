@@ -24,8 +24,8 @@ namespace BasitKatmanliMimariProjeAkay.Entities
         [Column(TypeName = "text")]
         public string aDRES { get; set; }
 
-        [MaxLength(50)]
-        public byte[] Email { get; set; }
+        [StringLength(150)]
+        public string Email { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? Tarih { get; set; }

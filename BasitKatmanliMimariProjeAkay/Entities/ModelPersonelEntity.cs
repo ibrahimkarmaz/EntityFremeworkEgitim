@@ -55,6 +55,10 @@ namespace BasitKatmanliMimariProjeAkay.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<ViewPersonelBirim>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ViewPersonelBirim>()
                 .Property(e => e.BirimAd)
                 .IsUnicode(false);
         }

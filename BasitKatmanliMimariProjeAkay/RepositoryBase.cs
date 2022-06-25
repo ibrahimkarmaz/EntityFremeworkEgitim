@@ -15,12 +15,12 @@ namespace BasitKatmanliMimariProjeAkay
     bağlam ma işlemleri yapılacak fakat dbcontextten buda veritabani işlemlerini yapmamınızı sağlıyor.
 
 
-
     ENG-TR:
     ContexT: Bağlam
     EntityState: Varlık Durumu
     Expression: ifade
     Func: İşlev
+    Entity varlık
   */
     public class RepositoryBase<Entity,Context> where Entity:class,new() where Context:DbContext,new()
     {
@@ -29,12 +29,12 @@ namespace BasitKatmanliMimariProjeAkay
         {
             db.Set<Entity>().AddOrUpdate(entitiy);
         }
-        public void Delete(EntityState entity,Expression<Func<Entity,bool>>obj)//silme metodu
+        public void Delete(Expression<Func<Entity,bool>>obj)//silme metodu
         {/*obj kısmı şart verileri*/
             var model = db.Set<Entity>().FirstOrDefault(obj);//Silme kritelerini belirtiyoruz.
             db.Set<Entity>().Remove(model);
         }
-        public List<Entity> GetList(Entity entity, Expression<Func<Entity, bool>> obj=null)//Listeleme Metodu Parametre kullanımı yapılabilir.
+        public List<Entity> GetList(Expression<Func<Entity, bool>> obj=null)//Listeleme Metodu Parametre kullanımı yapılabilir.
         {/*obj kısmı şart verileri*/
             List<Entity> liste;
             if (obj==null)
@@ -43,7 +43,7 @@ namespace BasitKatmanliMimariProjeAkay
                 liste = db.Set<Entity>().Where(obj).ToList();
             return liste;
         }
-        public Entity GetByFilter(Entity entity, Expression<Func<Entity, bool>> obj)//PARAMETRE KULLANIMINA BAĞLI TEK KAYIT GETİRME
+        public Entity GetByFilter(Expression<Func<Entity, bool>> obj)//PARAMETRE KULLANIMINA BAĞLI TEK KAYIT GETİRME
         {
             return db.Set<Entity>().FirstOrDefault(obj);
         }
