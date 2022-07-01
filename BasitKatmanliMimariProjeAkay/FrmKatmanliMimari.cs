@@ -20,9 +20,19 @@ namespace BasitKatmanliMimariProjeAkay
             InitializeComponent();
         }
         ViewPersonelBirimDAL vpbdal = new ViewPersonelBirimDAL();
+        BirimDAL bd = new BirimDAL();
         public void Yenile()
         {
             gridControl1.DataSource =vpbdal.GetList();
+
+            /*NOT: Hoca burada ComboBox kullandığı için datasource getlist mantıyla aldı ve alan adını birimad olarak göster
+             Biz ise: ComboBoxEdit kullandığımız için ilk birimleri oluşturduk sonra listeyi ve column(Birimad) Listeye ekledik bu listeyide comboboxedit'in içine.*/
+            List<string> Birimler = new List<string>();
+            foreach (var item in bd.GetList())
+            {
+                Birimler.Add(item.BirimAd);
+            }
+            CeBirim.Properties.Items.AddRange(Birimler);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
