@@ -102,6 +102,7 @@ namespace BasitKatmanliMimariProjeAkay
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
             // 
             // PersonelID
             // 
@@ -290,9 +291,9 @@ namespace BasitKatmanliMimariProjeAkay
             // 
             this.labelControl9.Location = new System.Drawing.Point(12, 289);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(35, 13);
+            this.labelControl9.Size = new System.Drawing.Size(39, 13);
             this.labelControl9.TabIndex = 17;
-            this.labelControl9.Text = "Durum:";
+            this.labelControl9.Text = "Aktif Mi:";
             // 
             // CeBirim
             // 
@@ -309,8 +310,8 @@ namespace BasitKatmanliMimariProjeAkay
             // 
             this.CeDurum.Location = new System.Drawing.Point(83, 286);
             this.CeDurum.Name = "CeDurum";
-            this.CeDurum.Properties.Caption = "checkEdit1";
-            this.CeDurum.Size = new System.Drawing.Size(75, 20);
+            this.CeDurum.Properties.Caption = "";
+            this.CeDurum.Size = new System.Drawing.Size(22, 20);
             this.CeDurum.TabIndex = 20;
             // 
             // DTTarih
@@ -331,6 +332,7 @@ namespace BasitKatmanliMimariProjeAkay
             this.SBtnYeni.Size = new System.Drawing.Size(121, 34);
             this.SBtnYeni.TabIndex = 22;
             this.SBtnYeni.Text = "Yeni";
+            this.SBtnYeni.Click += new System.EventHandler(this.SBtnYeni_Click);
             // 
             // SBtnKaydet
             // 
