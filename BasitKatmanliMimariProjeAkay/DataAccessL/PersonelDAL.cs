@@ -9,6 +9,5 @@ namespace BasitKatmanliMimariProjeAkay.DataAccessL
 {
     public class PersonelDAL:RepositoryBase<Personeller,ModelPersonelEntity>
     {
-
     }
 }

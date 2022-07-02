@@ -84,5 +84,29 @@ namespace BasitKatmanliMimariProjeAkay
         {
             Data_Binding(new Personeller());
         }
+        ModelPersonelEntity Datab;
+        Personeller a = new Personeller();
+        private void SBtnKaydet_Click(object sender, EventArgs e)
+        {
+            a.BirimID = 1;
+            a.AdSoyad = TeAdSoyad.Text;
+            a.Telefon = TeTelefon.Text;
+            a.aDRES = TeAdres.Text;
+            a.Email = TeMail.Text;
+            a.IsActive = false;
+            Datab.Personellers.Add(a);
+            Datab.SaveChanges();
+            Yenile();
+            Data_Binding(new Personeller());
+        }
+
+        private void SbtnSil_Click(object sender, EventArgs e)
+        {
+            int personelid = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["PersonelID"]).ToString());
+            pdal.Delete(p => p.PersonelID == personelid);
+            pdal.Save();
+            Yenile();
+            Data_Binding(new Personeller());
+        }
     }
 }

@@ -196,6 +196,7 @@ namespace BasitKatmanliMimariProjeAkay
             // 
             this.TePersonelID.Location = new System.Drawing.Point(83, 312);
             this.TePersonelID.Name = "TePersonelID";
+            this.TePersonelID.Properties.AccessibleName = "PersonelID";
             this.TePersonelID.Size = new System.Drawing.Size(176, 20);
             this.TePersonelID.TabIndex = 4;
             // 
@@ -211,6 +212,7 @@ namespace BasitKatmanliMimariProjeAkay
             // 
             this.TeAdSoyad.Location = new System.Drawing.Point(83, 338);
             this.TeAdSoyad.Name = "TeAdSoyad";
+            this.TeAdSoyad.Properties.AccessibleName = "AdSoyad";
             this.TeAdSoyad.Size = new System.Drawing.Size(176, 20);
             this.TeAdSoyad.TabIndex = 6;
             // 
@@ -342,6 +344,7 @@ namespace BasitKatmanliMimariProjeAkay
             this.SBtnKaydet.Size = new System.Drawing.Size(121, 34);
             this.SBtnKaydet.TabIndex = 23;
             this.SBtnKaydet.Text = "Kaydet";
+            this.SBtnKaydet.Click += new System.EventHandler(this.SBtnKaydet_Click);
             // 
             // SbtnSil
             // 
@@ -351,6 +354,7 @@ namespace BasitKatmanliMimariProjeAkay
             this.SbtnSil.Size = new System.Drawing.Size(121, 34);
             this.SbtnSil.TabIndex = 24;
             this.SbtnSil.Text = "Sil";
+            this.SbtnSil.Click += new System.EventHandler(this.SbtnSil_Click);
             // 
             // FrmKatmanliMimari
             // 
