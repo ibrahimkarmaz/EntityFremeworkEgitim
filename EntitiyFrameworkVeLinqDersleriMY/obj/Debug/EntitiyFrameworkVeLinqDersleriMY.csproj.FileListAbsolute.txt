@@ -95,3 +95,4 @@ C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgi
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\EntitiyFrameworkVeLinqDersleriMY\obj\Debug\EntitiyFrameworkVeLinqDersleriMY.csproj.CopyComplete
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\EntitiyFrameworkVeLinqDersleriMY\obj\Debug\EntitiyFrameworkVeLinqDersleriMY.exe
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\EntitiyFrameworkVeLinqDersleriMY\obj\Debug\EntitiyFrameworkVeLinqDersleriMY.pdb
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\EntitiyFrameworkVeLinqDersleriMY\obj\Debug\EntitiyFrameworkVeLinqDersleriMY.csprojAssemblyReference.cache

@@ -119,5 +119,74 @@ namespace EntitiyFrameworkVeLinqDersleriMY
         {
             gridControl1.DataSource = Database.NOTLISTESI();
         }
+
+        private void SBtnBul_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = Database.TBLOGRENCI.Where(x=> x.AD==TeOgrenciAd.Text & x.SOYAD==TeOgrenciSoyad.Text).ToList();
+        }
+
+        private void TeOgrenciAd_EditValueChanged(object sender, EventArgs e)
+        {
+            string aranan = TeOgrenciAd.Text;
+            var query = from s in Database.TBLOGRENCI
+                        where s.AD.Contains(aranan)
+                        select s;
+            gridControl1.DataSource = query.ToList();
+        }
+
+        private void SBtnEntitiy_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                List<TBLOGRENCI> liste1 = Database.TBLOGRENCI.OrderBy(p=>p.AD).ToList();
+                gridControl1.DataSource = liste1;
+            }
+            if (radioButton2.Checked)
+            {
+                List<TBLOGRENCI> liste2 = Database.TBLOGRENCI.OrderByDescending(p => p.AD).ToList();
+                gridControl1.DataSource = liste2;
+            }
+            if (radioButton3.Checked)
+            {
+                List<TBLOGRENCI> liste3 = Database.TBLOGRENCI.OrderBy(p => p.AD).Take(3).ToList();
+                gridControl1.DataSource = liste3;
+            }
+            if (radioButton4.Checked)
+            {
+                List<TBLOGRENCI> liste4 = Database.TBLOGRENCI.Where(p => p.ID == 5).ToList();
+                gridControl1.DataSource = liste4;
+            }
+            if (radioButton5.Checked)
+            {
+                List<TBLOGRENCI> liste5 = Database.TBLOGRENCI.Where(p => p.AD.StartsWith("a")).ToList();
+                gridControl1.DataSource = liste5;
+            }
+            if (radioButton6.Checked)
+            {
+                List<TBLOGRENCI> liste6 = Database.TBLOGRENCI.Where(p => p.AD.EndsWith("a")).ToList();
+                gridControl1.DataSource = liste6;
+            }
+            if (radioButton7.Checked)
+            {
+                bool deger = Database.TBLKULUPLER.Any();
+                XtraMessageBox.Show("DEĞER VAR MI ? \nCEVAP:"+(deger==true ?"VAR":"YOK"),"BİLGİ",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            if (radioButton8.Checked)
+            {
+                int OgrenciSayi = Database.TBLOGRENCI.Count();
+                XtraMessageBox.Show(OgrenciSayi.ToString());
+            }
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
