@@ -76,6 +76,12 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TeOgrenciID.Properties)).BeginInit();
@@ -495,9 +501,9 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             // SBtnEntitiy
             // 
             this.SBtnEntitiy.ImageOptions.Image = global::EntitiyFrameworkVeLinqDersleriMY.Properties.Resources.sortasc_32x32;
-            this.SBtnEntitiy.Location = new System.Drawing.Point(750, 462);
+            this.SBtnEntitiy.Location = new System.Drawing.Point(833, 458);
             this.SBtnEntitiy.Name = "SBtnEntitiy";
-            this.SBtnEntitiy.Size = new System.Drawing.Size(187, 39);
+            this.SBtnEntitiy.Size = new System.Drawing.Size(117, 39);
             this.SBtnEntitiy.TabIndex = 22;
             this.SBtnEntitiy.Text = "Linq Entitiy";
             this.SBtnEntitiy.Click += new System.EventHandler(this.SBtnEntitiy_Click);
@@ -595,12 +601,96 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.radioButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton9.Location = new System.Drawing.Point(750, 312);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(185, 22);
+            this.radioButton9.TabIndex = 30;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "SINAV 1 TOPLAM PUAN";
+            this.radioButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton10.Location = new System.Drawing.Point(750, 340);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(162, 22);
+            this.radioButton10.TabIndex = 31;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "SINAV 1 ORTALAMA";
+            this.radioButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton11.Location = new System.Drawing.Point(750, 368);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(194, 22);
+            this.radioButton11.TabIndex = 32;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "SINAV1 EN YÜKSEK NOT";
+            this.radioButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton12.Location = new System.Drawing.Point(750, 396);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(156, 22);
+            this.radioButton12.TabIndex = 33;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "SINAV 1 EN DÜŞÜK";
+            this.radioButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton13.Location = new System.Drawing.Point(750, 429);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(189, 22);
+            this.radioButton13.TabIndex = 34;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "MURAT HOCANIN SORU";
+            this.radioButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton14.Location = new System.Drawing.Point(750, 467);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(77, 22);
+            this.radioButton14.TabIndex = 35;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "SORU 2";
+            this.radioButton14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton14.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(949, 509);
+            this.ClientSize = new System.Drawing.Size(962, 509);
+            this.Controls.Add(this.radioButton14);
+            this.Controls.Add(this.radioButton13);
+            this.Controls.Add(this.radioButton12);
+            this.Controls.Add(this.radioButton11);
+            this.Controls.Add(this.radioButton10);
+            this.Controls.Add(this.radioButton9);
             this.Controls.Add(this.radioButton8);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.radioButton6);
@@ -702,6 +792,12 @@ namespace EntitiyFrameworkVeLinqDersleriMY
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton14;
     }
 }
 

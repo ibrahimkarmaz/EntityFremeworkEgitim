@@ -176,7 +176,58 @@ namespace EntitiyFrameworkVeLinqDersleriMY
                 int OgrenciSayi = Database.TBLOGRENCI.Count();
                 XtraMessageBox.Show(OgrenciSayi.ToString());
             }
+            if (radioButton9.Checked)//BURADAN DEVAM EDİLDİ.
+            {
+                var toplam = Database.TBLNOTLAR.Sum(p => p.SINAV1);
+                XtraMessageBox.Show("TOPLAM SINAV 1 ÖĞRENCİ NOTU:"+toplam.ToString() , "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (radioButton10.Checked)
+            {
+                var ortalama = Database.TBLNOTLAR.Average(x => x.SINAV1);
+                XtraMessageBox.Show("ORTALAMA SINAV 1 ÖĞRENCİ NOTU:" + ortalama.ToString(), "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (radioButton11.Checked)
+            {
+                var enYuksek = Database.TBLNOTLAR.Max(x => x.SINAV1);
+                XtraMessageBox.Show("SINAV 1 EN YÜKSEK NOT:" + enYuksek.ToString(), "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (radioButton12.Checked)
+            {
+                var enDusuk = Database.TBLNOTLAR.Min(x => x.SINAV1);
+                XtraMessageBox.Show("SINAV 1 EN DÜŞÜK NOT:" + enDusuk.ToString(), "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+
+
+
+
+            //SORU:SINAV1 NOTUNUN ORTALAMASININ BÜYÜK OLANLARI GETİR 65 75 85 İSE ORTALAMA 75 OLACAĞI İÇİN 75 VE 85 GELECEK
+            if (radioButton13.Checked)
+            {
+                List<TBLNOTLAR> tablo = Database.TBLNOTLAR.Where(y => y.SINAV1 > Database.TBLNOTLAR.Average(x => x.SINAV1)).ToList();
+                gridControl1.DataSource = tablo;
+            }
+            //SORU2: SINAV 1 AİT EN YÜKSEK NOTA SAHİP OLAN KİŞİNİN BİLGİLERİ
+            if (radioButton14.Checked)
+            {
+                //NOT:BEN DEVEXPRESS GRİDCONTROL KULLANIYORUM SİZ DEĞİŞTİRİRSİNİZ.
+                //OLASILIK 1 NOTLAR TABLOSUNDA Kİ BİLGİLERİ GETİRME
+                var enYuksek = Database.TBLNOTLAR.Max(x => x.SINAV1);
+                List<TBLNOTLAR> Tablo = Database.TBLNOTLAR.Where(y => y.SINAV1 == enYuksek).ToList();
+                gridControl1.DataSource = Tablo;
+
+                //KISA KULLANIM:
+                
+
+
+                //DİKKAT ÇÖZÜMEDİ TEKRAR BAKILACAK.
+               /* //OLASILIK 2 (JOIN KULLANMADAN)NOTLAR TABLOSUNDA BİLGİYİ ALIP ÖĞRENCİ BİLGİLERİ GETİRME
+                var enYuksek2 = Database.TBLNOTLAR.Max(x => x.SINAV1);
+                var Tablo2 = Database.TBLNOTLAR.First(y => y.SINAV1 == enYuksek);
+                List<TBLOGRENCI> tablo3 = Database.TBLOGRENCI.First(z => z.ID == Tablo2.OGR).get;
+                //List < TBLOGRENCI > ogrTablo = Database.TBLOGRENCI.Where(z => z.ID == ogrNo.)*/
+                
+            }
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
