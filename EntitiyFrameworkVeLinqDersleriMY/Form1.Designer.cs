@@ -497,7 +497,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.SBtnEntitiy.ImageOptions.Image = global::EntitiyFrameworkVeLinqDersleriMY.Properties.Resources.sortasc_32x32;
             this.SBtnEntitiy.Location = new System.Drawing.Point(750, 462);
             this.SBtnEntitiy.Name = "SBtnEntitiy";
-            this.SBtnEntitiy.Size = new System.Drawing.Size(170, 39);
+            this.SBtnEntitiy.Size = new System.Drawing.Size(187, 39);
             this.SBtnEntitiy.TabIndex = 22;
             this.SBtnEntitiy.Text = "Linq Entitiy";
             this.SBtnEntitiy.Click += new System.EventHandler(this.SBtnEntitiy_Click);
@@ -600,7 +600,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(932, 509);
+            this.ClientSize = new System.Drawing.Size(949, 509);
             this.Controls.Add(this.radioButton8);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.radioButton6);

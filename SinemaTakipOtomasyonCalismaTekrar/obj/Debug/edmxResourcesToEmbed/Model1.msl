@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SOSModelStoreContainer" CdmEntityContainer="DBSOSEntities">
+    <EntitySetMapping Name="Bilet_Tablo">
+      <EntityTypeMapping TypeName="SOSModel.Bilet_Tablo">
+        <MappingFragment StoreEntitySet="Bilet_Tablo">
+          <ScalarProperty Name="Archive" ColumnName="Archive" />
+          <ScalarProperty Name="satisno" ColumnName="satisno" />
+          <ScalarProperty Name="filmad" ColumnName="filmad" />
+          <ScalarProperty Name="filmtarih" ColumnName="filmtarih" />
+          <ScalarProperty Name="filmseans" ColumnName="filmseans" />
+          <ScalarProperty Name="koltukno" ColumnName="koltukno" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="ucret" ColumnName="ucret" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

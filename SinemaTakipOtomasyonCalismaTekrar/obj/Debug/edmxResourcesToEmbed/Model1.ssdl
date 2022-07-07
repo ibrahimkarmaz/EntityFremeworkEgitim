@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bilet_Tablo">
+    <Key>
+      <PropertyRef Name="satisno" />
+    </Key>
+    <Property Name="satisno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="filmad" Type="varchar" MaxLength="50" />
+    <Property Name="filmtarih" Type="varchar" MaxLength="50" />
+    <Property Name="filmseans" Type="varchar" MaxLength="10" />
+    <Property Name="koltukno" Type="varchar" MaxLength="4" />
+    <Property Name="ad" Type="varchar" MaxLength="50" />
+    <Property Name="soyad" Type="varchar" MaxLength="50" />
+    <Property Name="ucret" Type="varchar" MaxLength="3" />
+    <Property Name="Archive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="SOSModelStoreContainer">
+    <EntitySet Name="Bilet_Tablo" EntityType="Self.Bilet_Tablo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
