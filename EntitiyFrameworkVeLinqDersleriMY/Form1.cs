@@ -213,21 +213,25 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             {
                 //NOT:BEN DEVEXPRESS GRİDCONTROL KULLANIYORUM SİZ DEĞİŞTİRİRSİNİZ.
                 //OLASILIK 1 NOTLAR TABLOSUNDA Kİ BİLGİLERİ GETİRME
-                var enYuksek = Database.TBLNOTLAR.Max(x => x.SINAV1);
+              /*  var enYuksek = Database.TBLNOTLAR.Max(x => x.SINAV1);
                 List<TBLNOTLAR> Tablo = Database.TBLNOTLAR.Where(y => y.SINAV1 == enYuksek).ToList();
-                gridControl1.DataSource = Tablo;
+                gridControl1.DataSource = Tablo;*/
 
                 //KISA KULLANIM:
-                
 
 
-                //DİKKAT ÇÖZÜMEDİ TEKRAR BAKILACAK.
-               /* //OLASILIK 2 (JOIN KULLANMADAN)NOTLAR TABLOSUNDA BİLGİYİ ALIP ÖĞRENCİ BİLGİLERİ GETİRME
-                var enYuksek2 = Database.TBLNOTLAR.Max(x => x.SINAV1);
-                var Tablo2 = Database.TBLNOTLAR.First(y => y.SINAV1 == enYuksek);
-                List<TBLOGRENCI> tablo3 = Database.TBLOGRENCI.First(z => z.ID == Tablo2.OGR).get;
-                //List < TBLOGRENCI > ogrTablo = Database.TBLOGRENCI.Where(z => z.ID == ogrNo.)*/
-                
+                //2.YÖNTEM JOIN İLE
+                var query = from NotlarTable in Database.TBLNOTLAR
+                            join OgrenciTable in Database.TBLOGRENCI
+                            on NotlarTable.OGR equals OgrenciTable.ID
+                            where NotlarTable.SINAV1 == (Database.TBLNOTLAR.Max(a => a.SINAV1))
+                            select new
+                            {
+                                ÖĞRENCİADSOYAD=OgrenciTable.AD+" "+OgrenciTable.SOYAD,
+                                SINAV1NOT=NotlarTable.SINAV1
+                            };
+
+                gridControl1.DataSource = query.ToList();
             }
         }
 
