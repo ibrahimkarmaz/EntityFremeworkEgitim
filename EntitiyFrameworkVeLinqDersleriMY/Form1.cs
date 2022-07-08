@@ -60,12 +60,13 @@ namespace EntitiyFrameworkVeLinqDersleriMY
 
         private void SBtnNotListe_Click(object sender, EventArgs e)
         {
+            //KONU:BURADAKA EKSTRA FARKLI TABLODAN SELECT NEW İLE DEĞER EKLENDI...****
             var query = from item in Database.TBLNOTLAR
                         select new
                         {
                             item.NOTID,
                             item.OGR,
-                            item.DERS,
+                            item.TBLDERSLER.DERSAD,
                             item.SINAV1,
                             item.SINAV2,
                             item.SINAV3,
@@ -238,6 +239,30 @@ namespace EntitiyFrameworkVeLinqDersleriMY
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SBtnjoinileGetir_Click(object sender, EventArgs e)
+        {//JOIN İŞLEMLERİ
+             var sorgu = from t1 in Database.TBLNOTLAR
+                        join t2 in Database.TBLOGRENCI
+                        on t1.OGR equals t2.ID
+                        join t3 in Database.TBLDERSLER
+                        on t1.DERS equals t3.DERSID
+                        select new
+                        {
+                            ÖĞRENCİ=t2.AD+" "+t2.SOYAD,
+                            DERSAD=t3.DERSAD,
+                            SINAV1=t1.SINAV1,
+                            SINAV2=t1.SINAV2,
+                            SINAV3=t1.SINAV3,
+                            ORTALAMA=t1.ORTALAMA
+                        };
+            gridControl1.DataSource = sorgu.ToList();
         }
     }
 }

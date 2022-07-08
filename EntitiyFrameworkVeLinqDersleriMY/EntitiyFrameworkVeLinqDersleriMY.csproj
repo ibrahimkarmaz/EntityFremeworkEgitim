@@ -148,6 +148,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\table_32x32.png" />
     <None Include="Resources\sortasc_32x32.png" />
     <None Include="Resources\protectworkbook_32x32.png" />
     <None Include="Resources\refreshallpivottable_32x32.png" />

@@ -51,6 +51,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.TeDersAd = new DevExpress.XtraEditors.TextEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.SBtnjoinileGetir = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.TeDurum = new DevExpress.XtraEditors.TextEdit();
@@ -314,6 +315,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.SBtnjoinileGetir);
             this.groupControl3.Controls.Add(this.simpleButton2);
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Controls.Add(this.TeDurum);
@@ -332,6 +334,16 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.groupControl3.TabIndex = 16;
             this.groupControl3.Text = "Notlar";
             // 
+            // SBtnjoinileGetir
+            // 
+            this.SBtnjoinileGetir.ImageOptions.Image = global::EntitiyFrameworkVeLinqDersleriMY.Properties.Resources.table_32x32;
+            this.SBtnjoinileGetir.Location = new System.Drawing.Point(5, 178);
+            this.SBtnjoinileGetir.Name = "SBtnjoinileGetir";
+            this.SBtnjoinileGetir.Size = new System.Drawing.Size(99, 62);
+            this.SBtnjoinileGetir.TabIndex = 18;
+            this.SBtnjoinileGetir.Text = "JOİN\r\nGETİR";
+            this.SBtnjoinileGetir.Click += new System.EventHandler(this.SBtnjoinileGetir_Click);
+            // 
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = global::EntitiyFrameworkVeLinqDersleriMY.Properties.Resources.refreshallpivottable_32x32;
@@ -340,6 +352,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
             this.simpleButton2.Size = new System.Drawing.Size(171, 30);
             this.simpleButton2.TabIndex = 17;
             this.simpleButton2.Text = "Sınav Notu Güncelle";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -798,6 +811,7 @@ namespace EntitiyFrameworkVeLinqDersleriMY
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.RadioButton radioButton13;
         private System.Windows.Forms.RadioButton radioButton14;
+        private DevExpress.XtraEditors.SimpleButton SBtnjoinileGetir;
     }
 }
 
