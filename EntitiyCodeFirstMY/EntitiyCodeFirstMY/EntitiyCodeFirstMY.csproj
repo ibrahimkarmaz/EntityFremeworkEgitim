@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202207261412091_DeleteMusterisTable.designer.cs">
       <DependentUpon>202207261412091_DeleteMusterisTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207270949195_UrunlerEkleAciklama2Alan.cs" />
+    <Compile Include="Migrations\202207270949195_UrunlerEkleAciklama2Alan.designer.cs">
+      <DependentUpon>202207270949195_UrunlerEkleAciklama2Alan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207261412091_DeleteMusterisTable.resx">
       <DependentUpon>202207261412091_DeleteMusterisTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207270949195_UrunlerEkleAciklama2Alan.resx">
+      <DependentUpon>202207270949195_UrunlerEkleAciklama2Alan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

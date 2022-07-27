@@ -16,6 +16,7 @@ namespace EntitiyCodeFirstMY.Entity
         public int UrunStok { get; set; }
         public string Aciklama { get; set; }
 
+        public string Aciklama2 { get; set; }
         public Kategori Kategori { get; set; }
 
     }
