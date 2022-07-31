@@ -99,7 +99,12 @@ namespace EFLinqSorgulariRestrictionKisitlama
                 gridControl1.DataSource = (dataBase.TblPersonels.OrderBy(x => x.Soyad).ThenBy(y=>y.Ad).ToList());
             }//Ekstra:ThenByDescending:2.Ters Sıralama
 
-
+            if (radioButton11.Checked)
+            {
+                gridControl1.DataSource = (dataBase.TblPersonels.GroupBy(x => x.DepartmanID).Select(z => new { 
+                    DepartmanKodu = z.Key, Sayisi = z.Count()
+                }).OrderBy(y=>y.Sayisi)).ToList();
+            }
 
 
 

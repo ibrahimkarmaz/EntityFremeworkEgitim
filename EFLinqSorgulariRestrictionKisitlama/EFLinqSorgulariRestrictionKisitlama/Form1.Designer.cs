@@ -43,6 +43,7 @@ namespace EFLinqSorgulariRestrictionKisitlama
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -183,11 +184,22 @@ namespace EFLinqSorgulariRestrictionKisitlama
             this.radioButton10.Text = "Bütün Liste";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(225, 365);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(203, 17);
+            this.radioButton11.TabIndex = 13;
+            this.radioButton11.Text = "Her Departmanda Kaç Personel Var ?";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButton11);
             this.Controls.Add(this.radioButton10);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.radioButton8);
@@ -228,6 +240,7 @@ namespace EFLinqSorgulariRestrictionKisitlama
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton11;
     }
 }
 
