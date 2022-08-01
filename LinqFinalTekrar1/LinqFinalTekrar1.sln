@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFinalTekrar1", "LinqFinalTekrar1\LinqFinalTekrar1.csproj", "{9B61A82D-31B0-410C-B4A7-44334E7C575A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B61A82D-31B0-410C-B4A7-44334E7C575A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B61A82D-31B0-410C-B4A7-44334E7C575A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B61A82D-31B0-410C-B4A7-44334E7C575A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B61A82D-31B0-410C-B4A7-44334E7C575A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A2DE291-557A-4919-8002-701556B3B3EC}
+	EndGlobalSection
+EndGlobal
