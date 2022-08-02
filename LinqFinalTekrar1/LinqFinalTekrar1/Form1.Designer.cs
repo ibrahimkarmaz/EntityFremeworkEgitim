@@ -35,10 +35,6 @@ namespace LinqFinalTekrar1
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -62,6 +58,20 @@ namespace LinqFinalTekrar1
             this.accordionControlElement23 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement24 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement25 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement26 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement27 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement28 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement29 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement30 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement31 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement32 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.accordionControlElement33 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement34 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -79,7 +89,8 @@ namespace LinqFinalTekrar1
             this.accordionControlElement11,
             this.accordionControlElement14,
             this.accordionControlElement18,
-            this.accordionControlElement24});
+            this.accordionControlElement24,
+            this.accordionControlElement30});
             this.accordionControl1.Location = new System.Drawing.Point(0, 40);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
@@ -117,40 +128,6 @@ namespace LinqFinalTekrar1
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement2.Text = "Personel Listeleme(Where)";
             this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click_1);
-            // 
-            // fluentDesignFormControl1
-            // 
-            this.fluentDesignFormControl1.FluentDesignForm = this;
-            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(970, 40);
-            this.fluentDesignFormControl1.TabIndex = 2;
-            this.fluentDesignFormControl1.TabStop = false;
-            // 
-            // fluentFormDefaultManager1
-            // 
-            this.fluentFormDefaultManager1.DockingEnabled = false;
-            this.fluentFormDefaultManager1.Form = this;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(232, 40);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.fluentFormDefaultManager1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(738, 443);
-            this.gridControl1.TabIndex = 3;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // accordionControlElement3
             // 
@@ -311,7 +288,11 @@ namespace LinqFinalTekrar1
             // accordionControlElement24
             // 
             this.accordionControlElement24.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement25});
+            this.accordionControlElement25,
+            this.accordionControlElement26,
+            this.accordionControlElement27,
+            this.accordionControlElement28,
+            this.accordionControlElement29});
             this.accordionControlElement24.Name = "accordionControlElement24";
             this.accordionControlElement24.Text = "Elements";
             // 
@@ -320,6 +301,120 @@ namespace LinqFinalTekrar1
             this.accordionControlElement25.Name = "accordionControlElement25";
             this.accordionControlElement25.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement25.Text = "ElementAt";
+            this.accordionControlElement25.Click += new System.EventHandler(this.accordionControlElement25_Click);
+            // 
+            // accordionControlElement26
+            // 
+            this.accordionControlElement26.Name = "accordionControlElement26";
+            this.accordionControlElement26.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement26.Text = "FirstOrDefault";
+            this.accordionControlElement26.Click += new System.EventHandler(this.accordionControlElement26_Click);
+            // 
+            // accordionControlElement27
+            // 
+            this.accordionControlElement27.Name = "accordionControlElement27";
+            this.accordionControlElement27.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement27.Text = "First";
+            this.accordionControlElement27.Click += new System.EventHandler(this.accordionControlElement27_Click);
+            // 
+            // accordionControlElement28
+            // 
+            this.accordionControlElement28.Name = "accordionControlElement28";
+            this.accordionControlElement28.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement28.Text = "LastOrDefault";
+            this.accordionControlElement28.Click += new System.EventHandler(this.accordionControlElement28_Click);
+            // 
+            // accordionControlElement29
+            // 
+            this.accordionControlElement29.Name = "accordionControlElement29";
+            this.accordionControlElement29.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement29.Text = "Last";
+            this.accordionControlElement29.Click += new System.EventHandler(this.accordionControlElement29_Click);
+            // 
+            // accordionControlElement30
+            // 
+            this.accordionControlElement30.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement31,
+            this.accordionControlElement32,
+            this.accordionControlElement33,
+            this.accordionControlElement34});
+            this.accordionControlElement30.Expanded = true;
+            this.accordionControlElement30.Name = "accordionControlElement30";
+            this.accordionControlElement30.Text = "Belirli Aralıklala Listeleme İşlemleri";
+            // 
+            // accordionControlElement31
+            // 
+            this.accordionControlElement31.Name = "accordionControlElement31";
+            this.accordionControlElement31.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement31.Text = "Skip ile N Kadar Atla ve Tabloyu Göster";
+            this.accordionControlElement31.Click += new System.EventHandler(this.accordionControlElement31_Click);
+            // 
+            // accordionControlElement32
+            // 
+            this.accordionControlElement32.Name = "accordionControlElement32";
+            this.accordionControlElement32.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement32.Text = "SkipWhile Sarti göre N Kadar";
+            this.accordionControlElement32.Click += new System.EventHandler(this.accordionControlElement32_Click);
+            // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1});
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(970, 40);
+            this.fluentDesignFormControl1.TabIndex = 2;
+            this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Kaydet";
+            this.barButtonItem1.Id = 0;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // fluentFormDefaultManager1
+            // 
+            this.fluentFormDefaultManager1.DockingEnabled = false;
+            this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 1;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(232, 40);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.fluentFormDefaultManager1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(738, 443);
+            this.gridControl1.TabIndex = 3;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // accordionControlElement33
+            // 
+            this.accordionControlElement33.Name = "accordionControlElement33";
+            this.accordionControlElement33.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement33.Text = "Take ile Değer Gösterilecek(Top)";
+            this.accordionControlElement33.Click += new System.EventHandler(this.accordionControlElement33_Click);
+            // 
+            // accordionControlElement34
+            // 
+            this.accordionControlElement34.Name = "accordionControlElement34";
+            this.accordionControlElement34.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement34.Text = "TakeSkip DeğerGöster";
+            this.accordionControlElement34.Click += new System.EventHandler(this.accordionControlElement34_Click);
             // 
             // Form1
             // 
@@ -334,6 +429,7 @@ namespace LinqFinalTekrar1
             this.Name = "Form1";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -376,6 +472,16 @@ namespace LinqFinalTekrar1
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement23;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement24;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement25;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement26;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement27;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement28;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement29;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement30;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement31;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement32;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement33;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement34;
     }
 }
 
