@@ -65,13 +65,24 @@ namespace LinqFinalTekrar1
             this.accordionControlElement30 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement31 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement32 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement33 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement34 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement35 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement36 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement37 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement38 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement39 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement40 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement41 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement42 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement43 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement44 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement45 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.accordionControlElement33 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement34 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -90,7 +101,8 @@ namespace LinqFinalTekrar1
             this.accordionControlElement14,
             this.accordionControlElement18,
             this.accordionControlElement24,
-            this.accordionControlElement30});
+            this.accordionControlElement30,
+            this.accordionControlElement35});
             this.accordionControl1.Location = new System.Drawing.Point(0, 40);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
@@ -215,6 +227,7 @@ namespace LinqFinalTekrar1
             this.accordionControlElement15,
             this.accordionControlElement16,
             this.accordionControlElement17});
+            this.accordionControlElement14.Expanded = true;
             this.accordionControlElement14.Name = "accordionControlElement14";
             this.accordionControlElement14.Text = "Kontrol İşlemleri";
             // 
@@ -338,7 +351,6 @@ namespace LinqFinalTekrar1
             this.accordionControlElement32,
             this.accordionControlElement33,
             this.accordionControlElement34});
-            this.accordionControlElement30.Expanded = true;
             this.accordionControlElement30.Name = "accordionControlElement30";
             this.accordionControlElement30.Text = "Belirli Aralıklala Listeleme İşlemleri";
             // 
@@ -355,6 +367,107 @@ namespace LinqFinalTekrar1
             this.accordionControlElement32.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement32.Text = "SkipWhile Sarti göre N Kadar";
             this.accordionControlElement32.Click += new System.EventHandler(this.accordionControlElement32_Click);
+            // 
+            // accordionControlElement33
+            // 
+            this.accordionControlElement33.Name = "accordionControlElement33";
+            this.accordionControlElement33.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement33.Text = "Take ile Değer Gösterilecek(Top)";
+            this.accordionControlElement33.Click += new System.EventHandler(this.accordionControlElement33_Click);
+            // 
+            // accordionControlElement34
+            // 
+            this.accordionControlElement34.Name = "accordionControlElement34";
+            this.accordionControlElement34.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement34.Text = "TakeSkip DeğerGöster";
+            this.accordionControlElement34.Click += new System.EventHandler(this.accordionControlElement34_Click);
+            // 
+            // accordionControlElement35
+            // 
+            this.accordionControlElement35.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement36,
+            this.accordionControlElement37,
+            this.accordionControlElement38,
+            this.accordionControlElement39,
+            this.accordionControlElement40,
+            this.accordionControlElement41,
+            this.accordionControlElement42,
+            this.accordionControlElement43,
+            this.accordionControlElement44,
+            this.accordionControlElement45});
+            this.accordionControlElement35.Expanded = true;
+            this.accordionControlElement35.Name = "accordionControlElement35";
+            this.accordionControlElement35.Text = "Soru-Cevap(İŞ TAKİP)";
+            // 
+            // accordionControlElement36
+            // 
+            this.accordionControlElement36.Name = "accordionControlElement36";
+            this.accordionControlElement36.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement36.Text = "SORU 1";
+            this.accordionControlElement36.Click += new System.EventHandler(this.accordionControlElement36_Click);
+            // 
+            // accordionControlElement37
+            // 
+            this.accordionControlElement37.Name = "accordionControlElement37";
+            this.accordionControlElement37.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement37.Text = "SORU 2";
+            this.accordionControlElement37.Click += new System.EventHandler(this.accordionControlElement37_Click);
+            // 
+            // accordionControlElement38
+            // 
+            this.accordionControlElement38.Name = "accordionControlElement38";
+            this.accordionControlElement38.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement38.Text = "SORU 3";
+            this.accordionControlElement38.Click += new System.EventHandler(this.accordionControlElement38_Click);
+            // 
+            // accordionControlElement39
+            // 
+            this.accordionControlElement39.Name = "accordionControlElement39";
+            this.accordionControlElement39.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement39.Text = "SORU 4";
+            this.accordionControlElement39.Click += new System.EventHandler(this.accordionControlElement39_Click);
+            // 
+            // accordionControlElement40
+            // 
+            this.accordionControlElement40.Name = "accordionControlElement40";
+            this.accordionControlElement40.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement40.Text = "SORU 5";
+            this.accordionControlElement40.Click += new System.EventHandler(this.accordionControlElement40_Click);
+            // 
+            // accordionControlElement41
+            // 
+            this.accordionControlElement41.Name = "accordionControlElement41";
+            this.accordionControlElement41.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement41.Text = "SORU 6";
+            this.accordionControlElement41.Click += new System.EventHandler(this.accordionControlElement41_Click);
+            // 
+            // accordionControlElement42
+            // 
+            this.accordionControlElement42.Name = "accordionControlElement42";
+            this.accordionControlElement42.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement42.Text = "SORU 7";
+            this.accordionControlElement42.Click += new System.EventHandler(this.accordionControlElement42_Click);
+            // 
+            // accordionControlElement43
+            // 
+            this.accordionControlElement43.Name = "accordionControlElement43";
+            this.accordionControlElement43.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement43.Text = "SORU 8";
+            this.accordionControlElement43.Click += new System.EventHandler(this.accordionControlElement43_Click);
+            // 
+            // accordionControlElement44
+            // 
+            this.accordionControlElement44.Name = "accordionControlElement44";
+            this.accordionControlElement44.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement44.Text = "SORU 9";
+            this.accordionControlElement44.Click += new System.EventHandler(this.accordionControlElement44_Click);
+            // 
+            // accordionControlElement45
+            // 
+            this.accordionControlElement45.Name = "accordionControlElement45";
+            this.accordionControlElement45.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement45.Text = "SORU 10";
+            this.accordionControlElement45.Click += new System.EventHandler(this.accordionControlElement45_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -402,20 +515,6 @@ namespace LinqFinalTekrar1
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // accordionControlElement33
-            // 
-            this.accordionControlElement33.Name = "accordionControlElement33";
-            this.accordionControlElement33.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement33.Text = "Take ile Değer Gösterilecek(Top)";
-            this.accordionControlElement33.Click += new System.EventHandler(this.accordionControlElement33_Click);
-            // 
-            // accordionControlElement34
-            // 
-            this.accordionControlElement34.Name = "accordionControlElement34";
-            this.accordionControlElement34.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement34.Text = "TakeSkip DeğerGöster";
-            this.accordionControlElement34.Click += new System.EventHandler(this.accordionControlElement34_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -429,7 +528,6 @@ namespace LinqFinalTekrar1
             this.Name = "Form1";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -482,6 +580,17 @@ namespace LinqFinalTekrar1
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement32;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement33;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement34;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement35;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement36;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement37;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement38;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement39;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement40;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement41;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement42;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement43;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement44;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement45;
     }
 }
 

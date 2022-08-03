@@ -161,10 +161,6 @@ namespace LinqFinalTekrar1
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void accordionControlElement27_Click(object sender, EventArgs e)
         {//Eğer Değer Yoksa hata döndürür sırada öğe yok
@@ -224,6 +220,96 @@ namespace LinqFinalTekrar1
         private void accordionControlElement34_Click(object sender, EventArgs e)
         {//Mantığı: Eğer sağlanana kadar değerleri al sağlanınca sağlanan değeri al ve sonlardır.(SkipWhile ise True olanları almıyor false ise dondarip gösteriyor)
             gridControl1.DataSource = database.TblPersonel.ToList().TakeWhile(x=>x.Arsiv==true);
+        }
+        private void accordionControlElement36_Click(object sender, EventArgs e)
+        {//1-Personeldeki Personel sayısınını gösteren linq kodu(Aktif personel)
+            Console.WriteLine("Personel Sayısı:"+database.TblPersonel.Count(x=>x.Arsiv==true));
+        }
+
+
+        private void accordionControlElement38_Click(object sender, EventArgs e)
+        {//3-Departman Sayısı linq sorgu
+            Console.WriteLine("Departman Sayısı"+database.TblDepartmanlar.Count());
+        }
+
+        private void accordionControlElement39_Click(object sender, EventArgs e)
+        {//4-Firma Bilgilerini Getiren Linq Kodu
+            gridControl1.DataSource = database.TblFirmalar.ToList();
+        }
+
+        private void accordionControlElement40_Click(object sender, EventArgs e)
+        {//5-Firmalara ait ad,yetkili telefefon adres bilgisi linq
+            gridControl1.DataSource = database.TblFirmalar.Select(x => new
+            {
+                x.Ad,
+                x.Yetkili,
+                x.Telefon,
+                x.Adres
+            }).ToList();
+        }
+
+        private void accordionControlElement41_Click(object sender, EventArgs e)
+        {
+            //6-En çok çağrıda bulunan firma bilgileri
+             gridControl1.DataSource = database.TblFirmalar.ToList().Where(z => z.ID== (database.TblCagrilar.GroupBy(x => x.CagriFirma).Select(a => new
+             {
+                 a.Key,
+                 Sayi = a.Count()
+             }).OrderByDescending(c => c.Sayi).First().Key)).ToList();
+        }
+
+        private void accordionControlElement37_Click(object sender, EventArgs e)
+        {
+            //2-Departman adına göre sıralayarak Ahmet YILMAZ (Ad:ilk harf büyük soyad:Tümü büyük) ve Departman Adını gösteren linq
+            gridControl1.DataSource = (from pers in database.TblPersonel
+                                       join deps in database.TblDepartmanlar
+                                       on pers.DepartmanID equals deps.ID
+                                       select new
+                                       {
+                                           AdSoyad = pers.Ad.Substring(0, 1).ToUpper() + pers.Ad.Substring(1, pers.Ad.Length).ToLower() + " " + pers.Soyad.ToUpper(),
+                                           DepartmanAd = deps.Ad
+                                       }).ToList();
+        }
+
+        private void accordionControlElement42_Click(object sender, EventArgs e)
+        {//7-AÇIK KAPALI VE TOPLAM ÇAĞRI SAYISI
+            Console.WriteLine("Aktif Çağrı:{0}",database.TblCagrilar.Count(x=>x.Durum==true));
+            Console.WriteLine("Pasif Çağrı:{0}",database.TblCagrilar.Count(x=>x.Durum==false));
+            Console.WriteLine("Toplam Çağrı:{0}",database.TblCagrilar.Count());
+
+        }
+
+        private void accordionControlElement43_Click(object sender, EventArgs e)
+        {//8-Çağrıların Sayılarına göre çoktan aza sıralama
+          /*  gridControl1.DataSource = database.TblFirmalar.ToList().Where(z => z.ID == (database.TblCagrilar.GroupBy(x => x.CagriFirma).Select(a => new
+            {
+                a.Key,
+                Sayi = a.Count()
+            }).OrderByDescending(c => c.Sayi).First().Key)).ToList();*/
+        }
+
+        private void accordionControlElement44_Click(object sender, EventArgs e)
+        {//9-Firmalari sektore göre gruplama ve sayilari Listeleme
+            gridControl1.DataSource = (database.TblFirmalar.GroupBy(x => x.Sektor).Select(a => new { a.Key, sayi = a.Count() })).ToList();
+        }
+
+        private void accordionControlElement45_Click(object sender, EventArgs e)
+        {//10-Çağrı Tablosunu Düzenle ve Listele
+            gridControl1.DataSource = (from cagri in database.TblCagrilar
+                                       join firma in database.TblFirmalar
+                                       on cagri.ID equals firma.ID
+                                       where cagri.Durum == true
+                                       select new
+                                       {
+                                           firma.Ad,
+                                           firma.Telefon,
+                                           firma.Mail,
+                                           firma.Adres,
+                                           cagri.Konu,
+                                           cagri.Aciklama,
+                                           cagri.Tarih
+                                       }).ToList();
+            
         }
     }
 }

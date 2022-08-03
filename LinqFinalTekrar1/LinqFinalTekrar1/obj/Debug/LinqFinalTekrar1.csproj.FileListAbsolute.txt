@@ -1,3 +1,8 @@
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.Form1.resources
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.Properties.Resources.resources
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csproj.GenerateResource.cache
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.exe.licenses
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csproj.CoreCompileInputs.cache
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\LinqFinalTekrar1.exe.config
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\LinqFinalTekrar1.exe
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\LinqFinalTekrar1.pdb
@@ -88,12 +93,7 @@ C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgi
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.Form1.resources
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.Properties.Resources.resources
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csproj.GenerateResource.cache
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.exe.licenses
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csproj.CoreCompileInputs.cache
+C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csprojAssemblyReference.cache
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csproj.CopyComplete
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.exe
 C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.pdb
-C:\Users\ibrah\OneDrive\Belgeler\GitHub\EntityFremeworkEgitim\EntityFremeworkEgitim\LinqFinalTekrar1\LinqFinalTekrar1\obj\Debug\LinqFinalTekrar1.csprojAssemblyReference.cache
