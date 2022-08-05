@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_YedekParcaOtomasyonSistemiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MusteriYedekParcaListesi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TCNO" Type="varchar" MaxLength="11" />
+    <Property Name="YedekParcaKod" Type="varchar" MaxLength="10" />
+    <Property Name="alis_adet" Type="smallint" />
+    <Property Name="toplam_fiyat" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Db_YedekParcaOtomasyonSistemi.dbo.Tblilceler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tblilceler">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="sehir" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+    <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Db_YedekParcaOtomasyonSistemi.dbo.Tbliller' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbliller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Tblithalat">
+    <Key>
+      <PropertyRef Name="IthalatID" />
+    </Key>
+    <Property Name="IthalatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IthalatUnvan" Type="varchar" MaxLength="100" />
+    <Property Name="IthalatTelefon1" Type="varchar" MaxLength="13" />
+    <Property Name="IthalatTelefon2" Type="varchar" MaxLength="13" />
+    <Property Name="IthalatMail" Type="varchar" MaxLength="100" />
+    <Property Name="IthalatAdres" Type="varchar" MaxLength="200" />
+    <Property Name="IthalatVergiNo" Type="varchar" MaxLength="30" />
+    <Property Name="IthalatArsiv" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblMarkaModel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Marka" Type="varchar" MaxLength="20" />
+    <Property Name="Model" Type="varchar" MaxLength="20" />
+    <Property Name="Yil" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="TblMusteri">
+    <Key>
+      <PropertyRef Name="tcno" />
+    </Key>
+    <Property Name="tcno" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="resimyol" Type="varchar" MaxLength="200" />
+    <Property Name="ad" Type="varchar" MaxLength="20" />
+    <Property Name="soyad" Type="varchar" MaxLength="20" />
+    <Property Name="cinsiyet" Type="varchar" MaxLength="5" />
+    <Property Name="il" Type="varchar" MaxLength="20" />
+    <Property Name="ilce" Type="varchar" MaxLength="20" />
+    <Property Name="cep_telefonu" Type="varchar" MaxLength="20" />
+    <Property Name="ev_telefonu" Type="varchar" MaxLength="20" />
+    <Property Name="eposta" Type="varchar" MaxLength="50" />
+    <Property Name="ev_adresi" Type="varchar" MaxLength="250" />
+    <Property Name="ban" Type="bit" />
+    <Property Name="ban_aciklama" Type="varchar" MaxLength="100" />
+    <Property Name="arsiv" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblParcaAlisBilgi">
+    <Key>
+      <PropertyRef Name="ParcaAlisID" />
+    </Key>
+    <Property Name="ParcaAlisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IthalatID" Type="int" />
+    <Property Name="YedekParcaKod" Type="varchar" MaxLength="10" />
+    <Property Name="AlisAdeti" Type="smallint" />
+    <Property Name="AlisFiyat" Type="float" />
+    <Property Name="AlisTarih" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblYedekParca">
+    <Key>
+      <PropertyRef Name="YedekParcaKod" />
+    </Key>
+    <Property Name="YedekParcaKod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="YedekParcaAd" Type="varchar" MaxLength="50" />
+    <Property Name="YedekParcaKategori" Type="varchar" MaxLength="20" />
+    <Property Name="YedekParcaSatisFiyat" Type="float" />
+    <Property Name="YedekParcaAdet" Type="smallint" />
+    <Property Name="MarkaModelID" Type="int" />
+    <Property Name="YedekParcaAciklama" Type="varchar" MaxLength="200" />
+    <Property Name="Arsiv" Type="bit" />
+  </EntityType>
+  <Association Name="FK_MusteriYedekParcaListesi_TblMusteri">
+    <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
+    <End Role="MusteriYedekParcaListesi" Type="Self.MusteriYedekParcaListesi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMusteri">
+        <PropertyRef Name="tcno" />
+      </Principal>
+      <Dependent Role="MusteriYedekParcaListesi">
+        <PropertyRef Name="TCNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriYedekParcaListesi_TblYedekParca">
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="0..1" />
+    <End Role="MusteriYedekParcaListesi" Type="Self.MusteriYedekParcaListesi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblYedekParca">
+        <PropertyRef Name="YedekParcaKod" />
+      </Principal>
+      <Dependent Role="MusteriYedekParcaListesi">
+        <PropertyRef Name="YedekParcaKod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblParcaAlisBilgi_Tblithalat">
+    <End Role="Tblithalat" Type="Self.Tblithalat" Multiplicity="0..1" />
+    <End Role="TblParcaAlisBilgi" Type="Self.TblParcaAlisBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tblithalat">
+        <PropertyRef Name="IthalatID" />
+      </Principal>
+      <Dependent Role="TblParcaAlisBilgi">
+        <PropertyRef Name="IthalatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblParcaAlisBilgi_TblYedekParca">
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="0..1" />
+    <End Role="TblParcaAlisBilgi" Type="Self.TblParcaAlisBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblYedekParca">
+        <PropertyRef Name="YedekParcaKod" />
+      </Principal>
+      <Dependent Role="TblParcaAlisBilgi">
+        <PropertyRef Name="YedekParcaKod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblYedekParca_TblMarkaModel">
+    <End Role="TblMarkaModel" Type="Self.TblMarkaModel" Multiplicity="0..1" />
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMarkaModel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TblYedekParca">
+        <PropertyRef Name="MarkaModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Db_YedekParcaOtomasyonSistemiModelStoreContainer">
+    <EntitySet Name="MusteriYedekParcaListesi" EntityType="Self.MusteriYedekParcaListesi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tblithalat" EntityType="Self.Tblithalat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMarkaModel" EntityType="Self.TblMarkaModel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblParcaAlisBilgi" EntityType="Self.TblParcaAlisBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYedekParca" EntityType="Self.TblYedekParca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tblilceler" EntityType="Self.Tblilceler" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tblilceler].[id] AS [id], 
+    [Tblilceler].[ilce] AS [ilce], 
+    [Tblilceler].[sehir] AS [sehir]
+    FROM [dbo].[Tblilceler] AS [Tblilceler]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbliller" EntityType="Self.Tbliller" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbliller].[id] AS [id], 
+    [Tbliller].[sehir] AS [sehir]
+    FROM [dbo].[Tbliller] AS [Tbliller]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_MusteriYedekParcaListesi_TblMusteri" Association="Self.FK_MusteriYedekParcaListesi_TblMusteri">
+      <End Role="TblMusteri" EntitySet="TblMusteri" />
+      <End Role="MusteriYedekParcaListesi" EntitySet="MusteriYedekParcaListesi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriYedekParcaListesi_TblYedekParca" Association="Self.FK_MusteriYedekParcaListesi_TblYedekParca">
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+      <End Role="MusteriYedekParcaListesi" EntitySet="MusteriYedekParcaListesi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblParcaAlisBilgi_Tblithalat" Association="Self.FK_TblParcaAlisBilgi_Tblithalat">
+      <End Role="Tblithalat" EntitySet="Tblithalat" />
+      <End Role="TblParcaAlisBilgi" EntitySet="TblParcaAlisBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblParcaAlisBilgi_TblYedekParca" Association="Self.FK_TblParcaAlisBilgi_TblYedekParca">
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+      <End Role="TblParcaAlisBilgi" EntitySet="TblParcaAlisBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblYedekParca_TblMarkaModel" Association="Self.FK_TblYedekParca_TblMarkaModel">
+      <End Role="TblMarkaModel" EntitySet="TblMarkaModel" />
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

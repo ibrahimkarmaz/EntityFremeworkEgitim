@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_YedekParcaOtomasyonSistemiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MusteriYedekParcaListesi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCNO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="YedekParcaKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="alis_adet" Type="Int16" />
+    <Property Name="toplam_fiyat" Type="Double" />
+    <NavigationProperty Name="TblMusteri" Relationship="Self.FK_MusteriYedekParcaListesi_TblMusteri" FromRole="MusteriYedekParcaListesi" ToRole="TblMusteri" />
+    <NavigationProperty Name="TblYedekParca" Relationship="Self.FK_MusteriYedekParcaListesi_TblYedekParca" FromRole="MusteriYedekParcaListesi" ToRole="TblYedekParca" />
+  </EntityType>
+  <EntityType Name="Tblithalat">
+    <Key>
+      <PropertyRef Name="IthalatID" />
+    </Key>
+    <Property Name="IthalatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IthalatUnvan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatTelefon1" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatTelefon2" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatMail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatAdres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatVergiNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IthalatArsiv" Type="Boolean" />
+    <NavigationProperty Name="TblParcaAlisBilgi" Relationship="Self.FK_TblParcaAlisBilgi_Tblithalat" FromRole="Tblithalat" ToRole="TblParcaAlisBilgi" />
+  </EntityType>
+  <EntityType Name="TblMarkaModel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marka" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Yil" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TblYedekParca" Relationship="Self.FK_TblYedekParca_TblMarkaModel" FromRole="TblMarkaModel" ToRole="TblYedekParca" />
+  </EntityType>
+  <EntityType Name="TblMusteri">
+    <Key>
+      <PropertyRef Name="tcno" />
+    </Key>
+    <Property Name="tcno" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="resimyol" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cinsiyet" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="il" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ilce" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cep_telefonu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ev_telefonu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="eposta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ev_adresi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ban" Type="Boolean" />
+    <Property Name="ban_aciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="arsiv" Type="Boolean" />
+    <NavigationProperty Name="MusteriYedekParcaListesi" Relationship="Self.FK_MusteriYedekParcaListesi_TblMusteri" FromRole="TblMusteri" ToRole="MusteriYedekParcaListesi" />
+  </EntityType>
+  <EntityType Name="TblParcaAlisBilgi">
+    <Key>
+      <PropertyRef Name="ParcaAlisID" />
+    </Key>
+    <Property Name="ParcaAlisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IthalatID" Type="Int32" />
+    <Property Name="YedekParcaKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AlisAdeti" Type="Int16" />
+    <Property Name="AlisFiyat" Type="Double" />
+    <Property Name="AlisTarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tblithalat" Relationship="Self.FK_TblParcaAlisBilgi_Tblithalat" FromRole="TblParcaAlisBilgi" ToRole="Tblithalat" />
+    <NavigationProperty Name="TblYedekParca" Relationship="Self.FK_TblParcaAlisBilgi_TblYedekParca" FromRole="TblParcaAlisBilgi" ToRole="TblYedekParca" />
+  </EntityType>
+  <EntityType Name="TblYedekParca">
+    <Key>
+      <PropertyRef Name="YedekParcaKod" />
+    </Key>
+    <Property Name="YedekParcaKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YedekParcaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YedekParcaKategori" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="YedekParcaSatisFiyat" Type="Double" />
+    <Property Name="YedekParcaAdet" Type="Int16" />
+    <Property Name="MarkaModelID" Type="Int32" />
+    <Property Name="YedekParcaAciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Arsiv" Type="Boolean" />
+    <NavigationProperty Name="MusteriYedekParcaListesi" Relationship="Self.FK_MusteriYedekParcaListesi_TblYedekParca" FromRole="TblYedekParca" ToRole="MusteriYedekParcaListesi" />
+    <NavigationProperty Name="TblMarkaModel" Relationship="Self.FK_TblYedekParca_TblMarkaModel" FromRole="TblYedekParca" ToRole="TblMarkaModel" />
+    <NavigationProperty Name="TblParcaAlisBilgi" Relationship="Self.FK_TblParcaAlisBilgi_TblYedekParca" FromRole="TblYedekParca" ToRole="TblParcaAlisBilgi" />
+  </EntityType>
+  <EntityType Name="Tblilceler">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="sehir" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbliller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_MusteriYedekParcaListesi_TblMusteri">
+    <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
+    <End Role="MusteriYedekParcaListesi" Type="Self.MusteriYedekParcaListesi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMusteri">
+        <PropertyRef Name="tcno" />
+      </Principal>
+      <Dependent Role="MusteriYedekParcaListesi">
+        <PropertyRef Name="TCNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriYedekParcaListesi_TblYedekParca">
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="0..1" />
+    <End Role="MusteriYedekParcaListesi" Type="Self.MusteriYedekParcaListesi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblYedekParca">
+        <PropertyRef Name="YedekParcaKod" />
+      </Principal>
+      <Dependent Role="MusteriYedekParcaListesi">
+        <PropertyRef Name="YedekParcaKod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblParcaAlisBilgi_Tblithalat">
+    <End Role="Tblithalat" Type="Self.Tblithalat" Multiplicity="0..1" />
+    <End Role="TblParcaAlisBilgi" Type="Self.TblParcaAlisBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tblithalat">
+        <PropertyRef Name="IthalatID" />
+      </Principal>
+      <Dependent Role="TblParcaAlisBilgi">
+        <PropertyRef Name="IthalatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblYedekParca_TblMarkaModel">
+    <End Role="TblMarkaModel" Type="Self.TblMarkaModel" Multiplicity="0..1" />
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMarkaModel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TblYedekParca">
+        <PropertyRef Name="MarkaModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblParcaAlisBilgi_TblYedekParca">
+    <End Role="TblYedekParca" Type="Self.TblYedekParca" Multiplicity="0..1" />
+    <End Role="TblParcaAlisBilgi" Type="Self.TblParcaAlisBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblYedekParca">
+        <PropertyRef Name="YedekParcaKod" />
+      </Principal>
+      <Dependent Role="TblParcaAlisBilgi">
+        <PropertyRef Name="YedekParcaKod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Db_YedekParcaOtomasyonSistemiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MusteriYedekParcaListesi" EntityType="Self.MusteriYedekParcaListesi" />
+    <EntitySet Name="Tblithalat" EntityType="Self.Tblithalat" />
+    <EntitySet Name="TblMarkaModel" EntityType="Self.TblMarkaModel" />
+    <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" />
+    <EntitySet Name="TblParcaAlisBilgi" EntityType="Self.TblParcaAlisBilgi" />
+    <EntitySet Name="TblYedekParca" EntityType="Self.TblYedekParca" />
+    <EntitySet Name="Tblilceler" EntityType="Self.Tblilceler" />
+    <EntitySet Name="Tbliller" EntityType="Self.Tbliller" />
+    <AssociationSet Name="FK_MusteriYedekParcaListesi_TblMusteri" Association="Self.FK_MusteriYedekParcaListesi_TblMusteri">
+      <End Role="TblMusteri" EntitySet="TblMusteri" />
+      <End Role="MusteriYedekParcaListesi" EntitySet="MusteriYedekParcaListesi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriYedekParcaListesi_TblYedekParca" Association="Self.FK_MusteriYedekParcaListesi_TblYedekParca">
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+      <End Role="MusteriYedekParcaListesi" EntitySet="MusteriYedekParcaListesi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblParcaAlisBilgi_Tblithalat" Association="Self.FK_TblParcaAlisBilgi_Tblithalat">
+      <End Role="Tblithalat" EntitySet="Tblithalat" />
+      <End Role="TblParcaAlisBilgi" EntitySet="TblParcaAlisBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblYedekParca_TblMarkaModel" Association="Self.FK_TblYedekParca_TblMarkaModel">
+      <End Role="TblMarkaModel" EntitySet="TblMarkaModel" />
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblParcaAlisBilgi_TblYedekParca" Association="Self.FK_TblParcaAlisBilgi_TblYedekParca">
+      <End Role="TblYedekParca" EntitySet="TblYedekParca" />
+      <End Role="TblParcaAlisBilgi" EntitySet="TblParcaAlisBilgi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="333fad6307274cf6b346013ff79550d8" Name="Diagram1">
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.MusteriYedekParcaListesi" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.Tblithalat" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.TblMarkaModel" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.TblMusteri" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.TblParcaAlisBilgi" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.TblYedekParca" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.Tblilceler" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_YedekParcaOtomasyonSistemiModel.Tbliller" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="Db_YedekParcaOtomasyonSistemiModel.FK_MusteriYedekParcaListesi_TblMusteri" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_YedekParcaOtomasyonSistemiModel.FK_MusteriYedekParcaListesi_TblYedekParca" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_YedekParcaOtomasyonSistemiModel.FK_TblParcaAlisBilgi_Tblithalat" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_YedekParcaOtomasyonSistemiModel.FK_TblYedekParca_TblMarkaModel" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_YedekParcaOtomasyonSistemiModel.FK_TblParcaAlisBilgi_TblYedekParca" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
